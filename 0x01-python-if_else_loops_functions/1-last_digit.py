@@ -3,8 +3,8 @@ import random
 number = random.randint(-10000, 10000)
 
 if number < 0:
-    changeSigne = number * (-1)
-    lastDigit = changeSigne % 10
+    lastDigit = number * (-1)
+    lastDigit = lastDigit % 10
     lastDigit = lastDigit * (-1)
 else:
     lastDigit = number % 10
