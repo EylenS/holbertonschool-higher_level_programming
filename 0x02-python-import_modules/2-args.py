@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import sys
-
-def main():
+if __name__ == "__main__":
     numArguments = len(sys.argv) -1
     if numArguments == 0:
         print("0 arguments.")
@@ -12,6 +11,3 @@ def main():
         print("{:d} arguments:".format(numArguments))
         for i in range(1, numArguments + 1):
             print("{}: {}".format(i, sys.argv[i]))
-
-if __name__ == "__main__":
-    main()
