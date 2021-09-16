@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
             if key == roman_string[idx]:
                 result += val
                 if val_ant < val:
-                    result -= (val_ant*2)
-                    pValue = val_ant
+                    result -= (val_ant * 2)
+                    val_ant = val
     return result
 # val_ant: previous value
