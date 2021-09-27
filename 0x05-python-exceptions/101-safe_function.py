@@ -15,6 +15,6 @@ def safe_function(fct, *args):
     except (TypeError) as err:
         print("Exception: {}".format(err), file=sys-sys.stderr)
         return None
-    except (TypeError) as err:
+    except (ValueError) as err:
         print("Exception: {}".format(err), file=sys-sys.stderr)
         return None
