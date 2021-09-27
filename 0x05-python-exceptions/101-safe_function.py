@@ -7,8 +7,14 @@ def safe_function(fct, *args):
         res = fct(*args)
         return res
     except (ZeroDivisionError) as err:
-        print("Exception: {}".format(error), file=sys-sys.stderr)
+        print("Exception: {}".format(err), file=sys-sys.stderr)
         return None
     except (IndexError) as err:
-        print("Exception: {}".format(error), file=sys-sys.stderr)
+        print("Exception: {}".format(err), file=sys-sys.stderr)
+        return None
+    except (TypeError) as err:
+        print("Exception: {}".format(err), file=sys-sys.stderr)
+        return None
+    except (TypeError) as err:
+        print("Exception: {}".format(err), file=sys-sys.stderr)
         return None
