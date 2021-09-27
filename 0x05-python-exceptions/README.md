@@ -11,7 +11,7 @@
     How to raise a builtin exception
     When do we need to implement a clean-up action after an exception
 
-# 0-safe_print_list.py
+## 0-safe_print_list.py
 This function function prints x elements of a list.
 
     Prototype: def safe_print_list(my_list=[], x=0):
@@ -24,7 +24,7 @@ This function function prints x elements of a list.
     You are not allowed to import any module
     You are not allowed to use len()
 
-# 1. Safe printing of an integers list 
+## 1. Safe printing of an integers list 
 This function prints an integer with "{:d}".format().
 
     Prototype: def safe_print_integer(value):
@@ -37,7 +37,7 @@ This function prints an integer with "{:d}".format().
     You are not allowed to import any module
     You are not allowed to use type()
 
-# 2. Print and count integers
+## 2. Print and count integers
 This function prints the first x elements of a list and only integers.
 
     Prototype: def safe_print_list_integers(my_list=[], x=0):
@@ -51,7 +51,7 @@ This function prints the first x elements of a list and only integers.
     You are not allowed to import any module
     You are not allowed to use len()
 
-# 3. Integers division with debug
+## 3. Integers division with debug
 This function divides 2 integers and prints the result.
 
     Prototype: def safe_print_division(a, b):
@@ -62,7 +62,7 @@ This function divides 2 integers and prints the result.
     You have to use "{}".format() to print the result
     You are not allowed to import any module
 
-# 4. Divide a list
+## 4. Divide a list
 This function divides element by element 2 lists.
 
     Prototype: def list_division(my_list_1, my_list_2, list_length):
@@ -79,8 +79,14 @@ This function divides element by element 2 lists.
     You have to use try: / except: / finally:
     You are not allowed to import any module
 
-# 5. Raise exception 
+## 5. Raise exception 
 This function raises a type exception.
 
     Prototype: def raise_exception():
+    You are not allowed to import any module
+
+## 6. Raise a message 
+This function raises a name exception with a message.
+
+    Prototype: def raise_exception_msg(message=""):
     You are not allowed to import any module
