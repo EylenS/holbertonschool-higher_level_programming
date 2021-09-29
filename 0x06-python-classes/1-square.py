@@ -11,7 +11,7 @@ class Square:
     """
 
     def __init__(self, size):
-        
+
         """Initializing the data
         Arguments:
             size: The size of a square
