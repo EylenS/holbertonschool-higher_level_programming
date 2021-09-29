@@ -15,6 +15,7 @@ class Square:
         """Initializing the data
         Arguments:
             size: The size of a square
+            __size: is private attribute
         """
 
         self.__size = size
