@@ -2,9 +2,6 @@
 """Defines a class called Rectangle."""
 
 
-from typing import NewType
-
-
 class Rectangle:
     """Representates a rectangle."""
     def __init__(self, width=0, height=0):
