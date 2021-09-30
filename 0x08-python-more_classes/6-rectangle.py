@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 class Rectangle:
+    """Represent a rectangle."""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -8,9 +9,9 @@ class Rectangle:
             width(int): width of the rectangle
             height(int): height of the rectangle.
         """
-        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -84,7 +85,6 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print a message:
-        when an instance of Rectangle is deleted."""
+        """Print a message when an instance of Rectangle is deleted."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
