@@ -68,7 +68,7 @@ class Rectangle:
             return 0
         return (2 * (self.__width + self.__height))
 
-    def __str__(self) -> str:
+    def __str__(self):
         """Print a rectangle
         Returns a rectangle shape in stdout."""
         aux = ""
