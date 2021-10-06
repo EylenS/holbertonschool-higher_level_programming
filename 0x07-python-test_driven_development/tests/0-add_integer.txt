@@ -1,0 +1,47 @@
+======================
+0-add_integer module
+----------------------
+
+This module contains a function that adds 2 integers.
+a and b must be integers or floats, otherwise raise a
+TypeError exception with the message a must be an integer or
+b must be an integer.
+
+Import the module:
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Add 2 integers
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(2)
+    100
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer("a", 6)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(a, 6)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'a' is not defined
+
+    >>> add_integer(.5)
+    98
+
+    >>> add_integer(23, "wrong")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
