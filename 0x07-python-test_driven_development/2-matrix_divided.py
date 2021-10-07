@@ -22,11 +22,11 @@ def matrix_divided(matrix, div):
         internalList = []
         for j in range(len(matrix[i])):
             if type(matrix[i][j]) is not int and type(matrix[i][j]) is not float:
-                raise TypeError("matrix must be a matrix (list of)\
-                    lists) of integers/floats")
+                raise TypeError("matrix must be a matrix (list oflists)\
+                    of integers/floats")
             if len(matrix[0]) != len(matrix[i]):
-                raise TypeError("Each row of the matrix must have\
-                    the same size")
+                raise TypeError("Each row of the matrix must have the\
+                    same size")
             internalList.append(round(matrix[i][j] / div, 2))
         newList.append(internalList)
     return newList
