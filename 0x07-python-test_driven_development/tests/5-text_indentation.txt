@@ -56,4 +56,5 @@ Print the text:
 
     >>> text_indentation("")
 
-    
+    >>> text_indentation("   hello world     ")
+    hello world
