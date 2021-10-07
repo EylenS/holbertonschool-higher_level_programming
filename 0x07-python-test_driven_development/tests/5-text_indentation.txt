@@ -16,11 +16,11 @@ Print the text:
     >>> text_indentation(text)
     Hello!.
     <BLANKLINE>
-    How're u?$
+    How're u?
     <BLANKLINE>
-    there're:$
+    there're:
     <BLANKLINE>
-    cake, biscuits, candy, smothies.$
+    cake, biscuits, candy, smothies.
     <BLANKLINE>
     Mmm!
 
