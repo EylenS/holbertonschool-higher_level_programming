@@ -1,0 +1,59 @@
+==========================
+ 5-text_indentation module
+--------------------------
+
+This modules contains a function that prints a text with 2 new
+lines after each of these characters: ., ? and :.
+
+Import the module:
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+If the text were:
+    >>> text = "Hello! How're u? there're: cake, biscuits, candy, smothies. Mmm"
+
+Print the text:
+    
+    >>> text_indentation(text)
+    Hello!.
+    <BLANKLINE>
+    How're u?$
+    <BLANKLINE>
+    there're:$
+    <BLANKLINE>
+    cake, biscuits, candy, smothies.$
+    <BLANKLINE>
+    Mmm!
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation("hola", "mundo")
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> text_indentation("hola" + "mundo")
+    holamundo
+
+    >>> text_indentation(98)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation("one.")
+    one.
+    <BLANKLINE>
+
+    >>> text_indentation("how are u?")
+    how are u?
+    <BLANKLINE>
+
+    >>> text_indentation("options:")
+    options:
+    <BLANKLINE>
+
+    >>> text_indentation("")
+
+    
