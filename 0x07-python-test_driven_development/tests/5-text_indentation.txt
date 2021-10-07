@@ -9,7 +9,7 @@ Import the module:
     >>> text_indentation = __import__("5-text_indentation").text_indentation
 
 If the text were:
-    >>> text = "Hello! How're u? there're: cake, biscuits, candy, smothies. Mmm"
+    >>> text = "Hello!. How're u? there're: cake, biscuits, candy, smothies. Mmm!"
 
 Print the text:
     
