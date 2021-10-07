@@ -5,15 +5,15 @@
 def matrix_divided(matrix, div):
     """Divides each of the elements of a matrix."""
 
+    newList = []
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    newList = []
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix (list of lists)\
             of integers/floats")
+
     for i in range(len(matrix)):
         if type(matrix[i]) is not list:
             raise TypeError("matrix must be a matrix (list of\
