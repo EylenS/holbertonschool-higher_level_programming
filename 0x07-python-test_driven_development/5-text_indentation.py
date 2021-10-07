@@ -24,7 +24,6 @@ def text_indentation(text):
                 break
             if text[i + 1] == " ":
                 i += 1
-            while text[i] == " " and text[i + 1] == " " and \
-            i + 1 < len(text):
+            while text[i] == " " and text[i + 1] == " " and i + 1 < len(text):
                 i += 1
         i += 1
