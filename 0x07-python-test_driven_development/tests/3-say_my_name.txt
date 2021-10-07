@@ -36,9 +36,9 @@ Print the string:
     TypeError: first_name and last_name must be string
 
     >>> say_my_name("Bob")
-    My name is Bob
+    My name is Bob 
    
    >>> say_my_name(Hello)
    Traceback (most recent call last):
    ...
-   NameError: name 'hello' is not defined
+   NameError: name 'Hello' is not defined
