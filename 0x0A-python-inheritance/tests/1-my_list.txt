@@ -31,3 +31,9 @@ Import the module:
     >>> mylist = MyList()
     >>> mylist.print_sorted()
     []
+
+    >>> mylist.append(0)
+    >>> mylist.append(-5)
+    >>> mylist.append(30)
+    >>> print(mylist)
+    [0, -5, 30]
