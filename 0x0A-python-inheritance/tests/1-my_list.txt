@@ -7,6 +7,9 @@ the list, but sorted (ascending sort).
 
 Import the module:
     >>> MyList = __import__('1-my_list').MyList
+
+    >>> def __str__(self):
+    ...    return str(self.test)
     
     >>> mylist = MyList([1, 4, 2, 3, 5])
     >>> mylist.print_sorted()
