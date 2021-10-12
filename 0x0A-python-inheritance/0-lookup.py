@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This module has function that returns the list
-of attributes and methods of an object.
+This module has a function look up attributes and methods of an object.
 """
 
 
