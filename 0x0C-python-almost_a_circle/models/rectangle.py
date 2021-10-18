@@ -95,3 +95,20 @@ class Rectangle(Base):
     def __str__(self):
         """Overrides the __str__ method to return a predefined string."""
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def update(self, *args):
+        """This method assigns an argument to each attribute."""
+        if len(args) >= 1:
+            # enumerate() method adds counter to an iterable and returns it.
+            # The returned object is an enumerate object.
+            for idx, item in enumerate(args):
+                if idx == 0:
+                    self.id = item
+                elif idx == 1:
+                    self.width = item
+                elif idx == 2:
+                    self.height = item
+                elif idx == 3:
+                    self.x = item
+                elif idx == 4:
+                    self.y = item
