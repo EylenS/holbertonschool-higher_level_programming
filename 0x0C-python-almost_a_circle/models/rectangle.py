@@ -96,11 +96,12 @@ class Rectangle(Base):
         """Overrides the __str__ method to return a predefined string."""
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(self.id, self.__x, self.__y, self.__width, self.__height))
 
-    def update(self, *args):
-        """This method assigns an argument to each attribute."""
+    def update(self, *args, **kwargs):
+        """This method assigns a key/value argument to attributes.
+        **kwargs must be skipped if *args exists and is not empty"""
+        # using len() method in args to count
         if len(args) >= 1:
-            # enumerate() method adds counter to an iterable and returns it.
-            # The returned object is an enumerate object.
+            # enumerate() method adds counter to an iterable and returns it
             for idx, item in enumerate(args):
                 if idx == 0:
                     self.id = item
@@ -112,3 +113,17 @@ class Rectangle(Base):
                     self.x = item
                 elif idx == 4:
                     self.y = item
+# do something else, don't care about the args.
+# **kwargs takes the arguments as a dictionary.
+        else:
+            for key in kwargs.keys():
+                if key == "id":
+                    self.id = kwargs["id"]
+                if key == "width":
+                    self.width = kwargs["width"]
+                if key == "height":
+                    self.height = kwargs["height"]
+                if key == "x":
+                    self.x = kwargs["x"]
+                if key == "y":
+                    self.y = kwargs["y"]
