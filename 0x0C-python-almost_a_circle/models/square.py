@@ -29,3 +29,31 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """This method updates attrs by:
+        *args: takes arguments as a tuple.
+        **kwargs: takes arguments as a dict.
+        The parameters are associated according to the dict keys.."""
+        # using len() method in args to count
+        if len(args) >= 1:
+            # enumerate() method adds counter to an iterable and returns it
+            for idx, item in enumerate(args):
+                if idx == 0:
+                    self.id = item
+                elif idx == 1:
+                    self.size = item
+                elif idx == 2:
+                    self.x = item
+                elif idx == 3:
+                    self.y = item
+        else:
+            for key in kwargs.keys():
+                if key == "id":
+                    self.id = kwargs["id"]
+                if key == "size":
+                    self.size = kwargs["size"]
+                if key == "x":
+                    self.x = kwargs["x"]
+                if key == "y":
+                    self.y = kwargs["y"]
