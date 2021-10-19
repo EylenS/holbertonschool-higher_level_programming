@@ -2,6 +2,9 @@
 """This module defines a base class."""
 
 
+import json
+
+
 class Base:
     """Defines a Base class.
     __nb_objects is a private class attribute."""
@@ -15,3 +18,11 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """This method that returns the JSON string representation
+        of list_dictionaries."""
+        if len(list_dictionaries) == 0:
+            return []
+        else:
+            return (json.dumps(list_dictionaries))
