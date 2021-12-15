@@ -1,5 +1,5 @@
 #!/usr/bin/node
-export function nbOccurences (list, item) {
+exports.nbOccurences = function (list, item) {
   let counter = 0;
   for (let i = 0; i < list.length; i++) {
     if (list[i] === item) {
@@ -7,4 +7,4 @@ export function nbOccurences (list, item) {
     }
   }
   return (counter);
-}
+};
