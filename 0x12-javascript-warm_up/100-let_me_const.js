@@ -1,3 +1,3 @@
 #!/usr/bin/node
 const myVar = 333;
-module.exports.myVar = myVar;
+'100-let_me_const'.exports;
