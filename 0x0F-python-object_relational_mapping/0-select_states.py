@@ -1,21 +1,16 @@
 #!/usr/bin/python3
-"""This scrips allows to connect with database hbtn_0e_0_usa.
-Should take 3 arguments:
-n: user name
-p: password
-d: database name (no argument validation needed)"""
+"""
+This scrip allows to connect with database hbtn_0e_0_usa.
+"""
 
 import MySQLdb
-import sys
-
-
-n = sys.argv[1]
-p = sys.argv[2]
-d = 'hbtn_0e_0_usa'
+from sys import argv
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", port=3306, user=n, passwd=p, db=d)
+    """Connecting to MySQL database, getting a cursor and executing queries."""
+
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1], passwd=argv[2], db=argv[3])
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     query_states = cursor.fetchall()
