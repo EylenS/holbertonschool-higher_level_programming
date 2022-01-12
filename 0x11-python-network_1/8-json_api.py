@@ -8,18 +8,19 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    if len(argv) == 2:
-        q = argv[1]
-    else:
-        q = ''
-        r = requests.post("http://0.0.0.0:5000/search_user", data={'q': q})
-        try:
-            req = r.json()
+    try:
+        payload = {'q': argv[1]}
+        r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+        if r.headers.get('content-type') != 'application/json':
+            raise TypeError
+        req = r.json()
+        if req:
             id = req.get('id')
             name = req.get('name')
-            if len(r.json) == 0:
-                print('No result')
-            else:
-                print('[{}] {}'.format(id, name))
-        except:
-            print('Not a valid JSON')
+            print('[{}] {}'.format(id, name))
+        elif len(req) == 0:
+            print('No result')
+    except IndexError:
+        print('No result')
+    except TypeError:
+        print('Not a valid JSON')
