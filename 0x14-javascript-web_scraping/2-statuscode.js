@@ -9,6 +9,7 @@ const options = {
 request(options, function (error, response) {
   if (error) {
     console.log(error);
+    return;
   }
   console.log('code: ', response && response.statusCode);
 });
