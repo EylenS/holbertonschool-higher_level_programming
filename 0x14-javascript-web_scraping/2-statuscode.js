@@ -4,7 +4,7 @@ const request = require('request');
 const url = process.argv[2];
 const options = {
   url, method: 'GET'
-}
+};
 
 request(options, function (error, response) {
   if (error) {
