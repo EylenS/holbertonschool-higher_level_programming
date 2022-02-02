@@ -13,11 +13,10 @@ request(options, function (error, response, body) {
     console.log(error);
   } else if (response.statusCode === 200) {
     const resultsJSON = JSON.parse(body).results;
-    const charId = 'https://swapi-api.hbtn.io/api/people/18/';
     let count = 0;
     for (let x = 0; x < resultsJSON.length; x++) {
       for (let y = 0; y < resultsJSON[x].characters.length; y++) {
-        if (charId === resultsJSON[x].characters[y]) {
+        if (resultsJSON[x].characters[y].endsWith('/18/')) {
           count++;
         }
       }
